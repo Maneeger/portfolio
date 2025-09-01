@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useEffect } from 'react';
 import Hero from '@/components/Hero';
-import ProjectCard from "@/components/ProjectCard";
+import ProjectsPage from "./projects/page";
 
 export default function HomePage() {
     useEffect(() => {
@@ -15,7 +15,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <ProjectCard/>
+      <ProjectsPage/>
 
     </>
   );

@@ -1,5 +1,8 @@
 'use client'
 import React, { useEffect } from 'react';
+import Abouthero from  '@/components/about/Abouthero'
+import Testimony from  '@/components/about/Testimony'
+
 export default function AboutPage() {
   useEffect(() => {
       // Add the desired Tailwind classes to the body element//
@@ -10,8 +13,8 @@ export default function AboutPage() {
     }, []);
   return (
     <div>
-      <h1 className="text-3xl font-bold">About Me</h1>
-      <p className="mt-4">I'm a passionate developer building cool things with web tech.</p>
+     <Abouthero/>
+     
     </div>
   );
 }

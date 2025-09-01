@@ -4,6 +4,7 @@
   
    --color-Cblack-500: oklch(0.72 0.11 178);
   --color-midnight: #1B1212;
+  --color-darkglass:rgba(0, 0, 0, 0.4);
 }
 
 @layer base {

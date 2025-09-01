@@ -1,3 +1,5 @@
+"use client"
+import React, { useState } from "react";
 import ProjectCard from '@/components/ProjectCard';
 import Image from 'next/image';
 
@@ -27,24 +29,23 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-4 ">
-  {projects.map((project) => (
-    <div key={project.id} className="rounded-xl overflow-hidden   shadow-md shadow-black">
-      <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
-      <div className="p-4">
-        <h3 className="text-lg font-semibold text-white">{project.title}</h3>
-        <p className="text-gray-600 text-sm">{project.description}</p>
-        <a
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-amber-600 hover:underline inline-block mt-2"
-        >
-          Visit project →
-        </a>
+    <div>
+       <div >
+         {/* <h1 className="text-7xl font-bold text-[transparent]  w-full text-center mb-6  [-webkit-text-stroke-width:1.5px]
+            [-webkit-text-stroke-color:grey] ">My projects</h1> */}
       </div>
-    </div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-4 ">
+      
+  {projects.map((project) => (
+    <ProjectCard
+            key={project.id}
+            title={project.title}
+            description={project.description}
+            image={project.image}
+            link={project.link}
+          />
   ))}
+</div>
 </div>
   );
 }

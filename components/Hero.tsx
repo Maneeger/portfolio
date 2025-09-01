@@ -2,8 +2,14 @@ import { Code,CodeXml } from 'lucide-react';
 import Image from 'next/image';
 import RingGlow from './Ring';
 import { Poppins } from 'next/font/google';
+import {Saira } from 'next/font/google';
 
 const poppins = Poppins({
+  subsets: ['latin'],
+   weight: ['400', '600'],
+ 
+});
+const saira = Saira({
   subsets: ['latin'],
    weight: ['400', '600'],
  
@@ -95,16 +101,16 @@ export default function Hero() {
     < div className='flex flex-col bg-gradient-to-tl  overflow-hidden  from-midnight via-gray-900 to-midnight'>
       <div className="antialiased flex   flex-col lg:flex-row justify-between">
          <section className="py-14b flex text-center justify-center flex-col mt-4 sm:w-1/2   ">
-      <h1 className="text-6xl font-bold text-white">Hi, I'm samuel Ebube</h1>
-      <p className={`mt-4 text-lg text-white ${poppins.className}}`}>Frontend Developer & Creative Coder...</p>
-      <p  className={`mt-4 text-lg text-white ${poppins.className}}`}>"I'm a Frontend Engineer who builds user-friendly and good-looking websites.
+      <h1 className="text-6xl font-bold text-white">Hi, I'm Samuel Ebube</h1>
+      <p className={`mt-4 text-lg text-amber-500 ${saira.className} }`}>Frontend Developer & Creative Coder...</p>
+      <p  className={`mt-4 text-lg text-white ${poppins.className} text-md }`}>"I'm a Frontend Engineer who builds user-friendly and good-looking websites.
          I use tools like React, Next.js, and Tailwind CSS to create smooth and responsive web experiences."</p>
       <div className="flex w-full-600 items-center mt-12 justify-center gap-4" >
         
-         <button className=' p-2 bg-cyan-500'>
+         <button className={` p-2 bg-cyan-500 border-2 border-transparent hover:border-cyan-500 hover:bg-transparent hover:text-white ${poppins.className} text-sm`}>
         Got a project?
       </button>
-      <button className=' p-2  border-2 border-cyan-500 text-white'>
+      <button className={` p-2  border-2 border-cyan-500 ${poppins.className} text-sm text-white hover:border-transparent hover:bg-cyan-500 hover:text-black`}>
        My Resume
       </button>
       </div>

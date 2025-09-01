@@ -1,10 +1,18 @@
-// https://preline.co/docs/navbar.html#svg-and-text
+'use client'
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import Logo from './logo';
+
 
 export default function Navbar() {
+   const pathname = usePathname();
+     console.log('Current pathname:', pathname); // Add this line
+  // ... rest of your component
+
   return (
     <header className="relative flex flex-wrap sm:justify-start sm:flex-nowrap w-ful antialised bg-gradient-to-a  from-gray-900 via-Cblack text-sm py-3">
       <nav className="max-w-[85rem] w-full mx-auto px-4 sm:px-22 sm:flex sm:items-center sm:justify-between">
+        <Logo/>
         <div className="flex items-center justify-between">
           <Link
             className="flex-none text-xl font-semibold text-white focus:outline-none focus:opacity-80"
@@ -69,26 +77,27 @@ export default function Navbar() {
           <div className="flex antialiased text-base flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
             <Link
               className=" text-white font-semibold focus:outline-none"
-              href="#"
+              href="/"
               aria-current="page"
             >
               Landing
             </Link>
             <Link
-              className="font-semibold text-white hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
-              href="#"
+              className="className= text-white font-semibold hover:text-amber-400 focus:outline-none focus:text-amber-400
+               {pathname === '/projects' ? 'text-teal-400 font-bold' : 'text-white'}"
+              href="projects"
             >
               Projects
             </Link>
             <Link
-              className="font-semibold text-white hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
-              href="#"
+              className="font-semibold text-white hover:text-amber-400 focus:outline-none focus:text-amber-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+              href="about"
             >
             About
             </Link>
             <Link
-              className="font-semibold text-white hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
-              href="#"
+              className="font-semibold text-white hover:text-amber-400 focus:outline-none focus:text-amber-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+              href="contact"
             >
              Contact
             </Link>
